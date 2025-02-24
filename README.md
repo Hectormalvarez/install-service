@@ -1,6 +1,6 @@
 # service-setup-script
 
-A simple bash script to easily set up any installed program as a systemd service on Pop!_OS.
+A simple bash script to easily set up any installed program as a systemd service
 
 ## Description
 
@@ -11,7 +11,7 @@ This script streamlines the process of creating systemd service unit files for p
 ### Phase 1: Basic Service Setup (Current Phase)
 
 - [x] Prompt for program name.
-- [ ] Lookup program path using `which`.
+- [X] Lookup program path using `which`.
 - [ ] Create basic systemd service unit file.
 - [ ] Enable and start the service.
 
