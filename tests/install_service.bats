@@ -11,3 +11,14 @@
   [ "$status" -ne 0 ]
   [ "$(grep "Error: Program 'non_existent_program' not found in PATH." <<< "$output")" ]
 }
+
+@test "script: should error with empty input" {
+  run ./install_service.sh <<< ""
+  [ "$status" -ne 0 ]
+  [ "$(grep "Error: Program '' not found in PATH." <<< "$output")" ]
+}
+
+@test "script: should handle special characters" {
+  run ./install_service.sh <<< ";rm -rf /"
+  [ "$status" -ne 0 ]
+}
